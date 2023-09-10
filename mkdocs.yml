@@ -1,0 +1,64 @@
+site_name: FRC 997 Software Resources
+
+repo_url: https://github.com/Team997Coders/software-resources
+
+watch: [main.py]
+
+theme:
+  features:
+    - navigation.instant
+    - navigation.top
+    - search.suggest
+  name: material
+  logo: assets/997-logo.png
+  favicon: assets/997-logo.png
+  font:
+    text:
+      Fira Sans
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+  - mermaid2
+  - macros
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences:
+        # make exceptions to highlighting of code:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
+nav:
+  - Home: index.md
+  - 'Learning Java':
+    - 'Index': 'Learning Java/index.md'
+    - '1: Variables': 'Learning Java/1: Variables.md'
+    - '2: The Program Environment': 'Learning Java/2: The Program Environment.md'
+    - '3: Data Types of Numbers': 'Learning Java/3: Data Types of Numbers.md'
+    - '4: Booleans': 'Learning Java/4: Booleans.md'
+    - '5: Other Common Data Types': 'Learning Java/5: Other Common Data Types.md'
+  - 'Setting Up Your Programming Environment':
+    - 'Index': 'Setting Up Your Programming Environment/index.md'
+  - 'Command-Line Cheat Sheet':
+    - 'Index': 'Command-Line Cheat Sheet/index.md'
+  - 'Java Style Guide':
+    - 'Index': Java Style Guide/index.md
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
